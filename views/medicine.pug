@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to Assignment 10 in Medicine.Pug
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let medicine = [
+                    {
+                        "type": "Herbal",
+                        "cost": 100,
+                        "name": "paracetmol"
+                    },
+                    {
+                        "type": "Non herbal",
+                        "cost": 50,
+                        "name": "Azythromycin"
+                    },
+                    {
+                        "type": "Ayurvedic",
+                        "cost": 20,
+                        "name": "crocin"
+                    },                   
+                ]
+            each v in medicine
+                div(class="col-sm-2") #{v.type}
+                div(class="col-sm-2") #{v.cost}
+                div(class="col-sm-2") #{v.name}
