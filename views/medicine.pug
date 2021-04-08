@@ -23,7 +23,11 @@ block content
                         "name": "crocin"
                     },                   
                 ]
-            each v in medicine
-                div(class="col-sm-2") #{v.type}
-                div(class="col-sm-2") #{v.cost}
-                div(class="col-sm-2") #{v.name}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{s.type}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{s.cost}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{s.name}
+  script.                
+        function buy(intemNo)
+        {
+              alert(`you purchased Item ${intemNo+1}`)
+        }
